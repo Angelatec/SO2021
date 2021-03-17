@@ -20,13 +20,16 @@ main(void)
   dup(0);  // stderr
 
   for(;;){
-    printf(1, "init: starting sh\n");
+    printf(1, "Bienvenido a Sistemas Operativo\n");
     pid = fork();
     if(pid < 0){
       printf(1, "init: fork failed\n");
       exit();
     }
     if(pid == 0){
+	//1 Con ls nos está imprimiendo el directorio del SO infinítamente 
+	//2 nos marca como fallido el exec
+	//3 con sh de regreso nos imprime al final el mensaje de Bienvenida que le asigné
       exec("sh", argv);
       printf(1, "init: exec sh failed\n");
       exit();
