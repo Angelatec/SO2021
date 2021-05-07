@@ -30,6 +30,7 @@ int main(){
 	pipe(fd2);
 	pid = fork();
 		
+	
 	if (pid == 0){
 		//hijo
 		close(fd1[1]);
