@@ -32,10 +32,7 @@ int main(int argvnum, char **argv){
                 fwrite(linea,sizeof(char),size,fdestino);
             }
         }
-
     fclose(foriginal);
     fclose(fdestino);
-
     return 0;
-
 }
