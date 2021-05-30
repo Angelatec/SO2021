@@ -18,9 +18,6 @@ int main(int argc, char **argv) {
     scanf("%d", &newstudent.id);
     printf("semestre: ");
     scanf("%d", &newstudent.semestre);
-
-    // printf("%s %s %d %d \n",
-    // newstudent.name,newstudent.lastname,newstudent.id,newstudent.semestre);
     fwrite(&newstudent,sizeof(newstudent),1,fdestino);
   }
   fclose(fdestino);
